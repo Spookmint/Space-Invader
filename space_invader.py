@@ -89,7 +89,6 @@ def enemy_move():
 enemy_move()
 
 def player_shot(event):
-    touche = event.keysym
     game.create_image(c[0]+12,c[1]-12, anchor=NW, image=bullet_sprite, tag="bullet")
     game.update()
         
@@ -127,9 +126,9 @@ def shot_move():
 game.create_text(100, 100, text = "HP: "+ str(player_life), font = ('Helvetica', 20, 'bold'), justify = 'center', fill='red',tag="life_bar")
 shot_move()
 game.focus_set()
-game.bind_all("<KeyPress-space>", player_shot)
-game.bind_all("<KeyPress-right>", player_right)
-game.bind_all("<KeyPress-left>", player_left)
-game.bind_all("<KeyPress-up>", player_up)
-game.bind_all("<KeyPress-down>", player_down)
+game.bind("<space>", player_shot)
+game.bind("<Right>", player_right)
+game.bind("<Left>", player_left)
+game.bind("<Up>", player_up)
+game.bind("<Down>", player_down)
 window.mainloop()
