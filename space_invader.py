@@ -1,5 +1,4 @@
-﻿from tkinter import *
-from timeit import default_timer as timer
+from tkinter import *
 window=Tk()
 window.title("Space Invader")
 window.geometry("600x800")
